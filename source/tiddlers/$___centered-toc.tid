@@ -1,0 +1,15 @@
+caption: Centered Table of Contents
+created: 20210620031214691
+modified: 20210621041109640
+tags: $:/tags/TextEditor/Snippet
+title: $:/_centered-toc
+
+<hr width = "50%">
+<div class="tc-table-of-contents" style="margin: auto; width: max-content;">
+
+!! Table of Contents
+
+<<toc-selective-expandable tag >>
+
+</div>
+<hr width = "50%"><br>

@@ -1,0 +1,6 @@
+created: 20210621090653070
+modified: 20210621092722681
+tags: $:/tags/TextEditor/Snippet
+title: $:/_cyf/formatting/links
+
+<a href={{!!title}}></a>

@@ -1,0 +1,17 @@
+created: 20210619212908075
+modified: 20210621041307545
+tags: 
+title: $:/_transclude-tagged-h2
+
+<$list filter="[tag{!!title}butlast[]]">
+<h2><$link><$transclude field="caption"/></$link></h2>
+<$transclude mode="block"/>
+
+<br><hr width="75%"><br>
+</$list>
+<$list filter="[tag{!!title}last[]]">
+<h2><$link><$transclude field="caption"/></$link></h2>
+<$transclude mode="block"/>
+</$list>
+
+

@@ -1,0 +1,9 @@
+caption: The Default Directory
+created: 20201204145253810
+modified: 20210620091359817
+tags: [[Basic Setup]]
+title: The Default Directory
+
+Unitale and Create Your Frisk both have a "Default" directory. This is where resources from Undertale reside. It is not advised to modify files in this directory, as they are expected to be the same across all installations.
+
+If you wish to replace any of the default files for your mod, create a new file with the same name and location instead. For instance, if you want to change the player soul hurt sound, don't replace `Default/Sounds/hurtsound.wav`. Instead, create a new file located at `modname/Sounds/hurtsound.wav`. This also goes for sprites, music, and even fonts.

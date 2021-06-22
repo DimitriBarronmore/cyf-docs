@@ -1,0 +1,3 @@
+title: $:/plugins/flibbles/relink/language/PluginLibrary/Hint
+
+The //Relink// library contains //Relink// as well as its supplemental plugins. It is maintained by Flibbles. See the <a href={{$:/plugins/flibbles/relink!!source}}>github page</a> for more information.

@@ -1,0 +1,31 @@
+created: 20201108164931366
+list-before: 
+modified: 20210620092759871
+tags: [[Table of Contents]]
+title: Main Page
+
+!Welcome to Create your Frisk's documentation!
+
+''NOTE:'' There will be casual spoilers all over the place. If you haven't played or completed Undertale yet, it's highly recommended that you do so first! Don't say you weren't warned.
+
+Please consider reading the full documentation before you begin to gain a good idea of everything you can do with the engine.
+After that the fastest way to get started is to check out the existing encounters and tinker with them.
+ 
+Help is provided on the [[/r/Unitale subreddit|https://www.reddit.com/r/unitale]] and/or the [[official Unitale Discord|https://discord.com/invite/0c8fN7KCwBh4ZBL9]].
+
+Consider starting your visit with [[How to Read This Documentation]]. 
+
+''<span style="color:#ff0000"><u>FOR BACKWARDS COMPATIBILITY:</u></span>'' You can enable retrocompatibility mode from the options screen, and it should make all Unitale mods compatible with CYF! 
+
+<h4>Note: Create Your Frisk v0.6.5 was built using
+                <b><u><a href="https://netstorage.unity3d.com/unity/83fbdcd35118/UnityDownloadAssistant-2018.2.13f1.exe">
+                Unity Personal 2018.2.13f1</a></u></b>.
+                <br>See the GitHub page
+                <b><u><a href="https://github.com/RhenaudTheLukark/CreateYourFrisk">here</a></u></b>.</h4>
+
+---
+
+![[Table of Contents]]
+<div class="tc-table-of-contents">
+<<toc-selective-expandable 'Table of Contents' '!title[Main Page]'>>
+</div>

@@ -1,0 +1,12 @@
+caption: Contents
+created: 20210620032559627
+list-after: $:/core/ui/SideBar/Open
+modified: 20210621194213472
+tags: $:/tags/SideBar
+title: Table of Contents
+
+<div class="tc-table-of-contents">
+
+<<toc-selective-expandable 'Table of Contents'>>
+
+</div>

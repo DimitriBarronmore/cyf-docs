@@ -1,0 +1,18 @@
+caption: Script Indicators
+created: 20201204133745648
+list-after: Reading Function Examples
+modified: 20210620090942227
+tags: [[How to Read This Documentation]]
+title: Script Indicators
+
+All over this documentation, you will find...
+
+''`isCYF [E/M/W]`''
+
+''[E]'', ''[M]'', ''[W]'', or a mix of the three.
+
+These simply mean that the relevant variable, function or object is accessible from:
+
+* ''[E]:'' Encounter scripts.
+*  ''[M]:'' Monster scripts.
+*   ''[W]:'' Wave scripts.

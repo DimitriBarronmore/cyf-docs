@@ -1,0 +1,14 @@
+** Table of contents
+*/.tc-sidebar-lists .tc-table-of-contents {
+	white-space: nowrap;
+}.tc-table-of-contents button {
+	color: #ffe400;
+}.tc-table-of-contents svg {
+	width: 0.7em;
+	height: 0.7em;
+	vertical-align: middle;
+	fill: #ffe400;
+}.tc-table-of-contents ol {
+	list-style-type: upper-roman;
+	padding-left: 20px;
+}

@@ -1,0 +1,7 @@
+/*.tc-tags-wrapper { display:none; }*/
+.tc-subtitle {display:none;}
+
+/*[data-tags*="$:/hardlinebreaks"] .tc-tiddler-body {
+  word-break: normal; 
+  word-wrap: break-word;
+  white-space: pre-wrap; }*/

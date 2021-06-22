@@ -1,0 +1,259 @@
+created: 20210620083535773
+modified: 20210620093048773
+tags: [[Table of Contents]]
+title: in progress--Game Events
+
+This section is all about game events. Game events are functions in your scripts that the Unitale engine
+runs at various points in the game. By changing up your behaviour depending on the actions the player
+takes, you can go beyond a basic encounter and make it great.
+<!--
+<hr>
+<h3>Inherited events (Encounter -> Monster)</h3>
+
+An <span class="term">inherited event</span> is a function that gets run first on your Encounter script. If the
+function is not found in the Encounter script, it will try to run the same function on all monsters. If
+it's not found there either, it will resort to a default, built-in handler.
+
+-->
+
+<hr>
+<h2>Script-specific events</h2>
+
+<i>Script-specific events</i> are, as the name implies, functions that only happen for this specific script type.
+
+<h4>Encounter script events</h4>
+
+<a href={{!!title}}><span class="function">EncounterStarting()</span></a>
+Happens once when everything's done initializing but before any encounter actions start. You should do
+things like stopping the music here, or using <span class="term">State()</span> if you want to start the fight off with some
+dialogue.
+
+<span class="function">EnemyDialogueStarting()</span>
+Happens when you go to the monster dialogue state. You're still free to modify monster dialogue here.
+
+<span class="function">EnemyDialogueEnding()</span>
+Happens when you go from the monster dialogue state to the defending state.
+
+<span class="function">DefenseEnding()</span>
+Happens when you go from the defending state of the game to any other state. If you read up on the
+<span class="term">RandomEncounterText()</span> function, you'll want to use it here.
+
+<span class="function">HandleSpare()</span>
+Happens when you select the Spare option from the Mercy menu, regardless of whether a monster is
+spareable or not. This event fires <i>after</i> the sparing of monsters is completed. If you spare the
+last enemy in the encounter, this function will not happen - the encounter is over at that point.
+
+<span class="function">HandleItem(<span class="string"></span> item_ID, <span class="number"></span> position)</span>
+Happens when you select an item from the item menu. 
+
+<ul>
+<li><span class="term">item_ID</span>: The name of the item used, <b><u>IN ALL CAPS</u></b>.
+Similar to <span class="term">HandleCustomCommand</span> in monster scripts.</li>
+<li><span class="term">position</span>: The position of the item used in the player's inventory. The first item is number 1.</li>
+</ul>
+
+ In CYF, you can use the Inventory object to edit the player's inventory.
+The items' names will be in caps, like with <span class="term">HandleCustomCommand()</span>.
+
+```lua
+function HandleItem(ItemID, position)
+if ItemID == "DOGTEST2" then
+BattleDialog({"You selected The Second Dog.", "You are truly great."})
+else
+BattleDialog({"You didn't select The Second Dog.", "You could've picked better."})
+end
+DEBUG("You chose item #" .. position .. " in your inventory.")
+end
+
+```
+
+<span class="function">EnteringState(<span class="string"></span> newstate, <span class="string"></span>  oldstate)</span>
+A new, more flexible way of handling state changes. When you enter a new state, this function will fire
+with <span class="term">newstate</span> containing the new state's name, and <span class="term">oldstate</span> containing the previous
+state's name. Both are in all caps. One of the most powerful things about it is that you can use <span class="term">State()</span>
+here to interrupt state changes initiated by the engine itself.
+
+Possible states and when they execute are below:
+
+<ul>
+<li><span class="term">ACTIONSELECT</span> - Returning to the main part of the battle, where you can select
+FIGHT/ACT/ITEM/MERCY.
+</li>
+
+<li><span class="term">ATTACKING</span> - When you've selected a target with the FIGHT option.</li>
+
+<li><span class="term">DEFENDING</span> - When the enemy/enemies finish dialogue, and one or more waves start.</li>
+
+<li><span class="term">ENEMYSELECT</span> - When you've selected either FIGHT or ACT, and need to select an enemy.</li>
+
+<li><span class="term">ACTMENU</span> - When you've selected an ACT target, and must now select an ACT command.</li>
+
+<li><span class="term">ITEMMENU</span> - When you've selected ITEM.</li>
+
+<li><span class="term">MERCYMENU</span> - When you've selected MERCY.</li>
+
+<li><span class="term">ENEMYDIALOGUE</span> - When your enemy/enemies start their dialogue.</li>
+
+<li><span class="term">DIALOGRESULT</span> - When you call <span class="term">BattleDialog()</span>, or when the UI shows text on its own
+(e.g. when using an item).
+</li>
+
+</ul>
+Note: There are three states not mentioned here - because they never occur naturally. You can find them in <span class="ref">Functions &amp;
+objects</span>.
+
+For a clearer example, here's a code snippet replicating the older events above.
+
+```lua
+function EnteringState(newstate, oldstate)
+if newstate == "ENEMYDIALOGUE" then
+--same as EnemyDialogueStarting()
+elseif newstate!= "ENEMYDIALOGUE" and oldstate == "ENEMYDIALOGUE" then
+--same as EnemyDialogueEnding(). Alternatively, check for newstate == "DEFENDING"
+elseif newstate!= "DEFENDING" and oldstate == "DEFENDING" then
+--same as DefenseEnding()
+end
+end
+
+```
+
+<span class="function">Update()</span>
+This function runs for every frame (usually at 60FPS, depends on the player's framerate) for all of
+the encounter, even during waves. This is an extremely powerful function, as it can run any code at
+any time, no matter what. The only exception is the game over state - if the player dies, no code
+from within this function will be run.
+
+<span class="function"> BeforeDeath()</span>
+This function runs the moment the Player takes mortal damage (by any means, including bullet damage,
+scripted damage, setting <span class="term">Player.hp</span> to <span class="term">0</span>, and even
+text commands), just before activating the Game Over sequence. This is the perfect place to set Real
+and AlMighty Globals you want set when the player dies
+(see <span class="ref">Misc. Functions</span>).
+
+If you use <span class="term">Player.hp</span> or <span class="term">Player.Heal</span> here to bring the
+Player's hp back to greater than 0, they will live and the Game Over sequence will be cancelled.
+
+<hr>
+<h4>Monster script events</h4>
+
+<span class="function">HandleAttack(<span class="number"></span> damage)</span>
+Happens the moment the player's attack has applied damage - this is when you hear the hitting sound
+after the slash animation.
+
+<span class="term">damage</span> will be -1 if the player pressed Fight, but didn't press any
+buttons and let it end by itself. The monster's <span class="term">hp</span> variable will have updated at this time, too.
+
+Don't call <span class="term">BattleDialog()</span> here, it's a bit buggy right now.
+
+<span class="function">OnDeath()</span>
+Happens after your attack's shaking animation has completed and the monster's HP is 0. If you implement
+<span class="term">OnDeath()</span>, your monster will not die automatically, and you will have to do it manually with the
+<span class="term">Kill()</span> function.
+
+<span class="term">OnDeath()</span> will only happen through monster kills that happened with the
+FIGHT command; scripted <span class="term">Kill()</span> calls will not trigger it.
+
+Calling <span class="term">BattleDialog()</span> here will probably screw up the battle UI.
+
+<span class="function"> OnSpare()</span>
+Happens after you successfully spared a monster. If you implement <span class="term">OnSpare()</span>, your monster will not be
+spared automatically, and you will have to do it manually with the <span class="term">Spare()</span> function.
+
+<span class="term">OnSpare()</span> will only happen through a monster spare that happened with the SPARE command; scripted
+<span class="term">Spare()</span> calls will not trigger it.
+
+<span class="function"> BeforeDamageCalculation()</span>
+Happens before the damage calculation the moment you press Z when attacking. You can easily use <span class="term">SetDamage()</span>
+in this function. This is also the best place to initiate a dodge animation, if you want such a thing.
+
+<span class="function"> BeforeDamageValues(<span class="number"></span> damage)</span>
+Happens before the damage UI is displayed on the monster (the life bar and the damage number) and before
+the hp changing. You can still change the target with <span class="term">Player.ChangeTarget(targetNumber)</span> in this function,
+but you <i>can not</i> use <span class="term">SetDamage</span> here.
+
+ The argument <span class="term">damage</span> is equal to the incoming damage the enemy is about to take.
+
+Note that this damage has <u>not</u> been applied yet, unlike in <span class="term">HandleAttack</span>.
+
+<span class="function">HandleCustomCommand(<span class="string"></span> command)</span>
+Happens when you select an Act command on this monster. <span class="term">command</span> will be the same as how you
+defined it in the <span class="term">commands</span> list, except it will be <b><u>IN ALL CAPS</u></b>. Intermediate example
+below, showing how you can use it and spice it up a little.
+
+
+```lua
+commands = {"Sing", "Dance", "Wiggle"} --somewhere at the beginning
+wigglecounter = 0 --let's keep a counter to check how often we've wiggled
+
+function HandleCustomCommand(command)
+if command == "SING" then
+BattleDialog({"You sing your heart out. It's in the arena now."})
+elseif command == "DANCE" then
+BattleDialog({"You busted out your best moves."})
+elseif command == "WIGGLE" then
+if wigglecounter == 0 then --you can use variables to make commands more exciting!
+BattleDialog({"You just kind of stood there and wiggled."})
+elseif wigglecounter == 1 then
+BattleDialog({"You're still kind of standing there and wiggling."})
+else
+BattleDialog({"Your wiggled so often that your wiggling technique\ris now legendary."})
+end
+wigglecounter = wigglecounter + 1 --be sure to increase the wiggle counter, or it'll stay at 0
+end
+end
+
+```
+
+<hr>
+<h4>Wave script events</h4>
+
+<span class="function">Update()</span>
+This function is called every frame (usually at 60FPS) while monsters are attacking (the defense step).
+
+That's pretty much it. Update your bullets here - more on bullet creation and control is on the
+<span class="ref">API - Projectile Management</span> page.
+
+<span class="function"> EndingWave()</span>
+This function is called just before the wave ends. It allows you to easily reset some variables and other such things.
+
+<span class="function">OnHit(<span class="userdata">bullet</span> bullet)</span>
+Every time a bullet collides with a player, this function gets called from the script that created the
+projectile. The bullet object in this function can be modified if you feel like it. For more information
+on the bullet object, see the section <span class="ref">Projectile Management</span>.
+
+If you implement this function in your script, you have to manually define what should happen after
+bullet collision. This is what allows you to create orange, cyan and green projectiles, and much much
+more. If you don't implement this function in your script, it'll stick to the default of dealing 3
+damage on hit.<!-- Below are multiple examples of how to use this function. -->
+
+<hr>
+<h4>All-script events</h4>
+
+<i>All-script events</i> are events that can exist in all types of scripts - that's encounter, monster,
+and wave scripts.
+
+<span class="function">OnHit(<span class="userdata">bullet</span> bullet)</span>
+Every time a bullet collides with a player, this function gets called from the script that created the
+projectile. The bullet object in this function can be modified if you feel like it. For more information
+on the bullet object, see the section <span class="ref">Projectile Management</span>.
+
+If you implement this function in your script, you have to manually define what should happen after
+bullet collision. This is what allows you to create orange, cyan and green projectiles, and much much
+more. If you don't implement this function in your script, it'll stick to the default of dealing 3
+damage on hit.<!-- Below are multiple examples of how to use this function. -->
+
+<span class="function">OnTextAdvance(<span class="userdata">text</span> text, <span class="boolean"></span> final)</span>
+Every time a <span class="ref">Text Object</span> automatically advances to the next line of text (that's
+by any means <i>except</i> <span class="term">Text.NextLine()</span>), this function gets called in the
+script that created the text object. This function is the best place to manipulate the letters from
+<span class="term">Text.GetLetters</span>.
+
+<span class="term">text</span> is the text object in question, while <span class="term">final</span> is
+true only if the text object just advanced past its last line and deleted itself now that it's finished.
+
+Text objects have a one-frame delay by default - see <span class="term">CreateText</span> in
+<span class="ref">The Text Object</span>. If the text object is using this delay, then this function will
+additionally be called on the first frame it starts to type (so one frame after it gets created). But if
+you disable the one-frame delay, this function will <i>not</i> be called for the first line of text, since
+you would already be able to access <span class="term">Text.GetLetters</span> and similar properties right
+after calling <span class="term">CreateText</span>.

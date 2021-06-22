@@ -1,0 +1,36 @@
+caption: Files and Directories
+created: 20201204145220905
+modified: 20210620091359817
+tags: [[Basic Setup]]
+title: Files and Directories
+
+!!Scripts
+
+Encounter scripts are located in `modname/Lua/Encounters/`.
+Monster scripts are in `modname/Lua/Monsters/`,
+ and Wave scripts at `modname/Lua/Waves/`.
+If you're just getting started, check out these files in example encounters to see how they're put together.
+
+[[User-made libraries|http://lua-users.org/wiki/ModulesTutorial]] are usually placed under `modname/Lua/Libraries`. This is not a hard rule, but libraries which break convention will most likely come with installation instructions. If you're having trouble getting a library to work, remember to read the library's own documentation.
+
+''In the Overworld,'' //Event scripts// are located in `modname/Lua/Events/`, and Shop scripts are located in
+`modname/Lua/Shops`. These features are explained in the Overworld category in this documentation.
+
+
+!! Music
+
+Music can be put in `modname/Audio/`. Your music must be in .ogg or .wav format. Audacity can export to .ogg if you're missing the appropriate software.
+
+!!Sounds
+
+Sounds can be put in `modname/Sounds/`. They must be in .ogg or .wav format. You can play them with Audio.PlaySound(filename); more on this in [[The Audio Object|cyf/audio-object]].
+
+!!Voices
+
+Voices can be put in `modname/Voices/`. They must be in .ogg or .wav format, although .wav is generally recommended. You can use them with the [voice] text command; more on this in [[Text Commands|cyf/text-commands]].
+
+!!Sprites
+
+Sprites can be put in `modname/Sprites/`. They must be .png images. Note that most vanilla Undertale monster sprites start with a small base resolution, then resize the sprite to 2x its original resolution for an oldschool look.
+
+To //add a background// you can place a file titled `bg.png` in the sprites folder. This image will stretch over the entire background, so 640x480 resolution is recommended. Animating the background from the Lua side is not possible; however, you can instead use [[sprite layers|cyf/sprites/create-layer]] to place and animate sprites behind the default background layer.

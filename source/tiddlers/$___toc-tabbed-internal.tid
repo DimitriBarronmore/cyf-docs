@@ -1,0 +1,13 @@
+caption: toc-tabbed-internal
+created: 20210620032014914
+modified: 20210621041220438
+tags: $:/tags/TextEditor/Snippet
+title: $:/_toc-tabbed-internal
+
+<$macrocall
+	$name="toc-tabbed-internal-nav"
+	tag={{!!title}}
+	selectedTiddler="$:/temp/toc/selectedTiddler"
+	unselectedText="<p>Select a topic in the table of contents. Click the arrow to expand a topic.</p>"
+	missingText="<p>Missing tiddler.</p>"
+/>

@@ -1,0 +1,13 @@
+created: 20201109003043849
+modified: 20210621051503242
+tags: $:/tags/Stylesheet
+title: $:/_caption-titles
+
+<$list filter="[!field:caption[]]"> 
+[data-tiddler-title^="<$view field=title/>"] .tc-titlebar > .tc-tiddlylink::before {content: "<$view field=caption/>"; }
+[data-tiddler-title^="<$view field=title/>"] h2.tc-title {display:none; }"""
+
+"""
+</$list> 
+
+

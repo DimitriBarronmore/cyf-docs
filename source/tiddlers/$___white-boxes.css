@@ -1,0 +1,9 @@
+.tc-sidebar-header > .tc-reveal { background-color: #000000; border: 8px solid #ffffff; padding:14px; margin-right:14px;}
+
+.tc-tiddler-frame { border:4px solid #ffffff}
+
+[data-tiddler-title*="$:/"] {
+  border: 4px solid #039A39;
+}
+
+

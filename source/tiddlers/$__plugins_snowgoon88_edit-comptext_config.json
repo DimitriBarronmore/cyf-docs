@@ -1,0 +1,27 @@
+{
+  "configuration": {
+      "caseSensitive" : false,
+      "maxMatch" : 8,
+      "minPatLength" : 2
+  },
+  "template": [{
+      "pattern": "[[",
+      "filter": "[all[tiddlers]!is[system]]",
+      "start": "[[",
+      "end": "]]"
+      },{
+      "pattern": "||",
+      "filter": "[all[tiddlers]!is[system]]",
+      "start": "[[|",
+      "end": "]]",
+      "startOffset" : 2
+      },{
+      "pattern": "<<",
+      "body": "[tag[$:cyf-formatting]]",
+      "mask" : "$:/_cyf/formatting/",
+      "start": "",
+      "end": "</span>",
+      "endOffset":7
+      }
+  ]
+}
