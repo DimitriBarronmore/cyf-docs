@@ -1,0 +1,25 @@
+body {
+    font-weight:none, color:#ccc !important;
+    font-family:"8-bitoperator", sans-serif !important;
+    background-color:#000;
+    color:#bbb;
+    font-size:14px;
+}
+
+.tc-sidebar-scrollable {
+    font-size:12px;
+}
+
+.tc-story-river a:hover {
+    color: #ffea00;
+}
+
+a.tc-tiddlylink-external:hover {
+    color: #3dfb77;
+    background-color: inherit;
+}
+
+.li-indent, .li-indent a {
+    left: 5px !important;
+    width: 160px !important;
+}
