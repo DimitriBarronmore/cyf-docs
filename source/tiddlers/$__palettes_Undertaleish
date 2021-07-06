@@ -26,7 +26,7 @@ external-link-background: inherit
 external-link-foreground-hover: #3dfb77
 external-link-foreground-visited: #118424
 external-link-foreground: #44ee00
-foreground: #d9b667
+foreground: #bbbbbb
 message-background: #000000
 message-border: #ffffff
 message-foreground: #fae769
@@ -47,7 +47,7 @@ sidebar-button-foreground: #ffae14
 sidebar-controls-foreground-hover: #ffe400
 sidebar-controls-foreground: #ffae14
 sidebar-foreground-shadow: #000000
-sidebar-foreground: #ffe400
+sidebar-foreground: #dddddd
 sidebar-muted-foreground-hover: #fff824
 sidebar-muted-foreground: #ff9f00
 sidebar-tab-background-selected: #000000
@@ -58,7 +58,7 @@ sidebar-tab-divider: #ffffff
 sidebar-tab-foreground-selected: #ffea00
 sidebar-tab-foreground: #ffae14
 sidebar-tiddler-link-foreground-hover: #ffea00
-sidebar-tiddler-link-foreground: #ffae14
+sidebar-tiddler-link-foreground: #88aadd
 site-title-foreground: &lt;&lt;colour tiddler-title-foreground&gt;&gt;
 static-alert-foreground: #ff51ba
 tab-background-selected: #000000
