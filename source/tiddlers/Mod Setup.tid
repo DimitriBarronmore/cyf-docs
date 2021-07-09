@@ -1,5 +1,5 @@
 created: 20210621175318646
-modified: 20210709202827923
+modified: 20210709205504384
 tags: [[Getting Started]] [[Full Reference]]
 title: Mod Setup
 type: text/vnd.tiddlywiki
@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 By this point you'll probably want to set up an encounter of your own. Currently, scripts are set up like this:
 
-{{Types of Scrip t}}
+{{Types of Script}}
 
 From the mod selection screen, you may pick any mod, and play any encounter script within that mod.
 
