@@ -1,0 +1,26 @@
+created: 20210709192706888
+modified: 20210709193055974
+tags: [[Main Page]]
+title: Welcome
+type: text/vnd.tiddlywiki
+
+!! __Welcome to Create Your Frisk's documentation!__
+
+''NOTE:'' There will be casual <b>spoilers</b>
+all over the place. If you haven't played or completed Undertale yet, it's highly recommended that you do
+so first! Don't say you weren't warned.
+
+The fastest way to get started is
+to check out the existing encounters and tinker with them. This documentation is for reference if you
+want to know the specifics of everything. Help is provided on the [[/r/Unitale subreddit|http://www.reddit.com/r/Unitale]].
+
+For a primer on some of the formatting used in this documentation, see [[How to Read this Documentation]].
+For an overview of each section, see [[About this Documentation]].
+
+<span style="color:#ff0000"><u>FOR BACKWARDS COMPATIBILITY:</u></span> You can enable <b>retrocompatibility mode</b>
+from the options screen, and it should make all Unitale mods compatible with CYF!
+
+
+!! Note: Create Your Frisk v0.6.5 was built using [[Unity Personal 2018.2.13f1|https://netstorage.unity3d.com/unity/83fbdcd35118/UnityDownloadAssistant-2018.2.13f1.exe]].
+See the GitHub page
+[[here|https://github.com/RhenaudTheLukark/CreateYourFrisk]].

@@ -1,0 +1,8 @@
+created: 20210709202929401
+modified: 20210709202929513
+tags: 
+title: File Structure: Music
+type: text/vnd.tiddlywiki
+
+Music can be put in <span class="term">YOUR MOD/Audio/</span>. Your music must be in .ogg or .wav format. [[Audacity|http://audacityteam.org/download]] can export to .ogg if you're missing the
+appropriate software.

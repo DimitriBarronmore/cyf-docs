@@ -1,0 +1,32 @@
+created: 20210706215238450
+modified: 20210706215300111
+tags: 
+title: Reading Function Examples
+type: text/vnd.tiddlywiki
+
+After people had some problems reading the documentation correctly, I decided to create this little tutorial.
+Let's say you see something in the documentation that looks like this:
+
+<span class="function">
+Screen.DispImg(<span class="string"></span> path, <span class="number"></span> ID, <span class="number"></span> posX, <span class="number"></span> posY, <span class="number"></span> toneR = 255, <span class="number"></span> toneG = 255, <span class="number"></span> toneB = 255, <span class="number"></span> toneA = 255)
+</span>
+
+There are several things to know here. First of all, the arguments have a type and a name. The name really is here just to help you to know
+what the variable is, you don't really have to care about it. However, the type is important, it determines what kind of variable you'll need to send.
+
+In this example, <span class="string"></span> is a character chain (i.e. "hello"), and <span class="number"></span> is any number (i.e. 4).
+
+One last thing with functions: some of these arguments have a value after them - this is the variable's <i>default value</i>. So, you can
+   use the function <i>without</i> including that argument.
+In our example, that means that you can just call <span class="term">Screen.DispImg("poseur", 1, 320, 240)</span> - but you can add the
+   other values if you want to add them.
+
+   However, if you need to set <span class="term">toneB</span> in our example, you need to set <span class="term">toneR</span> and <span class=
+   "term">toneG</span> before it, as well. If you want to keep the default values, just enter the ones the documentation says :P
+
+So if we want to fully call this function and set <span class="term">toneA</span> to 128, we have to call it like this: 
+
+
+```lua
+Screen.DispImg("poseur", 1, 320, 240, 255, 255, 255, 128)
+```

@@ -1,0 +1,11 @@
+created: 20210708020047475
+modified: 20210708020303019
+tags: 
+title: Mod Selection Controls (lists)
+type: text/vnd.tiddlywiki
+
+''<span class="term">Z, Enter, or Mouse Click</span>'' - Jump to a mod you have installed (mod list), or start a selected encounter (encounter list).
+
+''<span class="term">X or left/right Shift</span>'' - Close the list.
+
+''<span class="term">Up and Down, Mouse Scroll, Click and Drag</span>'' - Move up and down through the list.

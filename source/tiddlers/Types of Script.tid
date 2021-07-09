@@ -1,0 +1,24 @@
+created: 20210621175327886
+list-before: 
+modified: 20210709200914525
+tags: [[Mod Setup]]
+title: Types of Script
+type: text/vnd.tiddlywiki
+
+<ul >
+<li style="margin-top: 15px;"> <u>[[Monster Scripts]]</u> - will contain information about your enemies. Here, you'll set things like their ATK, DEF, HP, random comments that might show up as encounter texts, random dialogue, and what ACT commands they have.
+</li>
+
+<li style="margin-top: 15px;"> <u>[[Encounter Scripts]]</u> - will contain a set of monsters, a set of wave scripts (that you can modify at any point), size of the arena, custom interactions for items, etc. A mod can have multiple encounter scripts.
+</li>
+
+
+<li style="margin-top: 15px;"> <u>[[Wave Scripts]]</u> - will contain an update function. You may use these to spawn, track, modify and otherwise interact with bullets during the defending phase of the game.
+</li>
+
+<li style="margin-top: 15px;"> <u>[[Event Scripts]]</u> - used within the Overworld. Will contain different functions that can be set up within Unity to run under certain conditions in game.
+</li>
+
+<li style="margin-top: 15px;"> <u>[[Shop Scripts]]</u> - used within the Overworld. Will contain many variables and functions controlling not only what items can be sold at what prices, but also shopkeeper dialog, special code and events to run, and the potential to animate the shopkeeper yourself.
+</li>
+</ul>

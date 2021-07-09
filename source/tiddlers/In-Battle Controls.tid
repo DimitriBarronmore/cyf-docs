@@ -1,0 +1,24 @@
+created: 20210708020219124
+modified: 20210708020219238
+tags: 
+title: In-Battle Controls
+type: text/vnd.tiddlywiki
+
+''<span class="term">Arrow keys, Z (or Enter), X (or left/right Shift)</span>'' - The same as in Undertale.
+
+
+''<span class="term">Esc</span>'' - Exit to the Mod Selection screen to assist in quickly testing mods.
+
+* Disabled if the encounter has <span class="term">unescape</span> set to true.
+
+
+''<span class="term">F9</span>'' - Toggle the debug console. You can write text to this with `DEBUG("your text here")` in your scripts.
+
+
+''<span class="term">H</span> (with the debug console open)'' - Show or hide hitboxes of bullets and
+the player.
+
+
+''<span class="term">F4, Alt+Enter</span>'' - Toggle fullscreen mode.
+
+* You can change how fullscreen displays with the option "blurless fullscreen" in the Options menu, found in the Mod Selection screen.

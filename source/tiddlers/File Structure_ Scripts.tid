@@ -1,0 +1,28 @@
+created: 20210709202717825
+modified: 20210709202717973
+tags: 
+title: File Structure: Scripts
+type: text/vnd.tiddlywiki
+
+The [[Encounter Scripts]] are located in <span class="term">YOUR MOD/Lua/Encounters/</span>.
+
+The [[Monster Scripts]]
+are in <span class="term">YOUR MOD/Lua/Monsters/</span>.
+
+The [[Wave Scripts]] are in <span class="term">YOUR MOD/Lua/Waves/</span>.
+
+If you're getting started, check out these files in example encounters to see how they're put together.
+
+
+You may also create a <span class="term">YOUR MOD/Lua/Libraries/</span> folder.
+You can put libraries other people have made in here (or create your own) for use in your other scripts. 
+
+Libraries/modules are more Lua functionality than they are Unitale functionality, so please read up about them
+[[here|http://lua-users.org/wiki/ModulesTutorial]] instead. There is an example encounterincluded making use of one such library.
+
+
+In the Overworld, [[Event Scripts]] are located in
+<span class="term">YOURMOD/Lua/Events/</span>, and
+[[Shop Scripts]] are located in
+<span class="term">YOURMOD/Lua/Shops</span>. These features are explained in the <span class="ref">Overworld</span>
+category in this documentation.

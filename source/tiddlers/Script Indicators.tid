@@ -1,0 +1,16 @@
+created: 20210706220618475
+modified: 20210709195507679
+tags: 
+title: Script Indicators
+type: text/vnd.tiddlywiki
+
+All over this documentation, you will find...
+
+<span class="function"> <span class="boolean"></span> isCYF ''[E/M/W]''</span>
+''[E]'', ''[M]'', ''[W]'', or a mix of the three.
+   
+These simply mean that the relevant variable, function or object is accessible from:
+
+* ''[E]'': [[Encounter scripts.|Encounter Scripts]]
+*  ''[M]'': [[Monster scripts.|Monster Scripts]]
+* ''[W]'': [[Wave scripts.|Wave Scripts]]

@@ -5,11 +5,19 @@
 	bottom: 0;
 	margin: auto;
 	padding: 50px 0 28px 20px;
+/* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.tc-sidebar-scrollable::-webkit-scrollbar {
+  display: none;
 }
 
 <$reveal state="$:/state/sidebar" type="match" text="yes">
 @media (max-width: 1050px) {
-.tc-sidebar-scrollable { width: 90%; margin: auto; padding:50px 0 28px 20px;; }
+.tc-sidebar-scrollable { width: auto; margin: auto; padding:50px 0 28px 20px;; }
 .tc-story-river {
      width: 90%;
      margin: auto;

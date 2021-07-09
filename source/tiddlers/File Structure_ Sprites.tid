@@ -1,0 +1,16 @@
+created: 20210709203353920
+modified: 20210709203354024
+tags: 
+title: File Structure: Sprites
+type: text/vnd.tiddlywiki
+
+Sprites can be put in <span class="term">YOUR MOD/Sprites/</span>. They must be in the .png format. Note that most vanilla
+Undertale monster sprites start with a small base resolution, then resize the sprite to 2x its original
+resolution for an oldschool look.
+
+To <u>add a background</u> you can have one file titled <span class="term">bg.png</span>
+in the sprites folder. <br>
+This image will stretch over the entire background, so 640x480 resolution is recommended. 
+
+Actually modifying and animating the background from the Lua side is not possible;
+however, in CYF, you may use sprite layers to create a sprite behind the built-in background layer and animate <i>that</i> instead.

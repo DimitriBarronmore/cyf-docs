@@ -24,8 +24,8 @@ h4 {
     /*text-decoration: underline;*/
     color: #ffffff;
     font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-weight: 500;
     line-height: 1.1;
 }
@@ -137,10 +137,10 @@ span.new::before {
     margin-bottom: 5px;
 }
 
-.function::before{
+/*.function::before{
     content:"\a";
     white-space: pre;
-}
+}*/
 
 /*.code-container{
     margin-bottom:15px;

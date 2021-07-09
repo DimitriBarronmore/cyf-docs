@@ -1,0 +1,9 @@
+created: 20210709203047439
+modified: 20210709203224689
+tags: 
+title: File Structure: Sounds
+type: text/vnd.tiddlywiki
+
+
+Sounds can be put in <span class="term">YOUR MOD/Sounds/</span>. They must be in .ogg or .wav format. You can play them with
+<span class="term">Audio.PlaySound(filename)</span>; more on this in [[The Audio Object]].

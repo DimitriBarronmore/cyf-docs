@@ -1,7 +1,8 @@
 created: 20210620031436778
-modified: 20210621041153229
+modified: 20210709201041649
 tags: 
 title: $:/_toplevel-toc-transclude
+type: text/vnd.tiddlywiki
 
 <hr width = "50%">
 <div class="tc-table-of-contents" style="margin: auto; width: max-content;">
@@ -17,12 +18,12 @@ title: $:/_toplevel-toc-transclude
 <hr width = "50%"><br>
 
 <$list filter="[tag{!!title}butlast[]]">
-<h1><$link><$transclude field="caption"/></$link></h1>
+<h1><$link><$transclude field="title"/></$link></h1>
 <$transclude mode="block"/>
 
 <br><hr><br>
 </$list>
 <$list filter="[tag{!!title}last[]]">
-<h1><$link><$transclude field="caption"/></$link></h1>
+<h1><$link><$transclude field="title"/></$link></h1>
 <$transclude mode="block"/>
 </$list>

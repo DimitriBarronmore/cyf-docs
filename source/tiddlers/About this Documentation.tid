@@ -1,0 +1,177 @@
+created: 20210621174416247
+modified: 20210709193122027
+tags: [[Main Page]]
+title: About this Documentation
+type: text/vnd.tiddlywiki
+
+<h4>Basics</h4>
+
+<i><u>Controls</u></i>
+
+A short little page that tells you about the controls used in Unitale and Create Your Frisk.
+
+
+
+<i><u>Basic setup</u></i>
+
+Details folder structure of mods, how the game reads folders and expects files, that kind of stuff.
+Recommended to start with.
+
+
+
+<span class="CYF"></span> <i><u>Unity Setup (Optional)</u></i>
+
+Explains the process of setting up Unity for use with Create Your Frisk, how to use the editor to play mods,
+where files and folders are located, and how to export CYF builds.
+
+
+
+<i><u>Special Variables</u></i>
+
+This section talks about the unique variables that are read from a mod's scripts and how to use these variables.
+
+
+
+<i><u>Terminology</u></i>
+
+This is a short page on what things are called in the documentation. For instance, the white box
+that the bullet dodging occurs in is referred to as the &quot;arena&quot;. Recommended read so you don't
+get lost in later parts of the documentation.
+<hr>
+<h4>API</h4>
+
+<i><u>Text commands</u></i>
+
+This is where all the special commands are that you can use in your dialogue boxes. Text effects,
+colours, character voices, automatic skipping, you name it. You can even add commands to run Lua
+code!
+
+
+
+<i><u>Game events</u></i>
+
+If you want to get your hands dirty with Lua, these are the functions the game will use from your
+script, and at what point they're used. Useful for if you want to have certain events occur during
+specific times, such as before/after using an act command or item, or just before the fight starts. A
+must-read for interactive fights.
+
+
+
+<i><u>Functions &amp; Objects</u></i>
+
+These are most custom functions and objects that you can use in your scripts, detailing how to use them
+and what they do. Want to control the music, check for game events or handle keyboard input? Global
+variables so you can communicate between scripts? Need to know how much HP the player has, damage them,
+heal them? This is where to go! Projectile management and sprite management are split off into separate
+sections below.
+
+
+
+<i><u>Projectile management</u></i>
+
+This is where you can read details about how to create projectiles, what you can do with them and some
+short examples.
+
+
+
+<span class="CYF"></span> <i><u>The Pixel-Perfect Collision System</u></i>
+
+This section shows you how CYF's Pixel-Perfect Collision System works. Why would you use square hitboxes when
+you have a system like this?
+
+
+
+<i><u>Sprites &amp; Animation</u></i>
+
+This section is about creating sprites and how to control them. By combining sprite functions, you can
+create animations.
+
+
+
+<span class="CYF"></span> <i><u>The Text Object</u></i>
+
+This section details the usage of CYF's Text Object. You can use it to create text anywhere at all, with any
+font, with or without a bubble, and more!
+<hr>
+<h4><span class="CYF"></span> <span class="new"></span>Shaders</h4>
+
+<i><u>Introduction</u></i>
+
+Here is where you can learn all about the shaders system added in Create Your Frisk v0.6.5! It requires a bit
+of setting up, but if you can handle it, shaders can be a fun visual addition to a mod.
+
+
+
+<i><u>The Shader Object</u></i>
+
+This is the actual object used from your battle's Lua scripts to apply and control shaders on a sprite or the
+entire screen.
+
+
+
+<i><u>Coding a Shader</u></i>
+
+Covers the process of creating and coding your own shaders for use with Create Your Frisk.
+
+
+
+<hr>
+<h4><span class="CYF"></span> Overworld</h4>
+
+<i><u>Basics</u></i>
+
+This section covers how to set up CYF on your computer with Unity, and describes in general how the Overworld
+is set up. Read this first if you are making an overworld.
+
+
+
+<i><u>How to create a map</u></i>
+
+This is where you can learn how to make a map in CYF's Overworld, with Tiled2Unity in mind.
+
+
+
+<i><u>How to create an event</u></i>
+
+Events are all the different objects, interactables, and cutscenes that you can add to your map. This page
+explains how to set them up in the Unity editor.
+
+
+
+<i><u>How to animate an event</u></i>
+
+This smaller tutorial explains the CYFAnimator system in the Overworld, which removes the need to use coding
+to set up animations on your events.
+
+
+
+<i><u>How to create a shop</u></i>
+
+This page fully documents everything accessible within Shops you can set up in the Overworld.
+
+
+
+<i><u>Overworld Objects</u></i>
+
+These are all the different objects you can control from within your Event scripts, and how to use them. Want
+to show dialogue, save the game, move characters around, control the player's stats, mess with the screen,
+and so on? These are the pages to see!
+
+
+
+A few things like the Audio object are carried over here from encounters. To see
+a list of all of them, see <span class="ref">Overworld - Basics</span>.
+<hr>
+<h4>Resources</h4>
+
+<i><u>Dialog bubble names</u></i>
+
+A list of every dialogue bubble name you can use with <span class="term">dialogbubble</span> in your monster
+scripts, and what they look like.
+
+
+
+<span class="CYF"></span> <i><u>Key List</u></i>
+
+This section shows you the list of keys available for <span class="term">Input.GetKey(key)</span> and
+<span class="term">[waitfor:key]</span>.

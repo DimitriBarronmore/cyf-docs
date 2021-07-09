@@ -1,0 +1,31 @@
+created: 20210621175318646
+modified: 20210709202827923
+tags: [[Getting Started]] [[Full Reference]]
+title: Mod Setup
+type: text/vnd.tiddlywiki
+
+<h2>[[Types of Script]]</h2>
+
+By this point you'll probably want to set up an encounter of your own. Currently, scripts are set up like this:
+
+{{Types of Scrip t}}
+
+From the mod selection screen, you may pick any mod, and play any encounter script within that mod.
+
+ In Create Your Frisk, the Overworld exists, and battles can be initiated from the Overworld with proper setup.
+
+As of CYF v0.6.4, the only folder required within a mod is the <span class="term">YOUR MOD/Lua/Encounters/</span> folder. For all older versions, your encounter will
+break if the other folders are missing.
+
+<br>
+<hr>
+<h2>[[File Structure]]</h2>
+
+{{File Structure}}
+
+<br>
+<hr>
+<h2>[[Default Assets]]</h2>
+
+{{Default Assets}}
+

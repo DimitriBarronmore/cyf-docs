@@ -6,6 +6,10 @@ body {
     font-size:14px;
 }
 
+strong, b {
+   color:#bb70ba;
+}
+
 .tc-sidebar-scrollable {
     font-size:12px;
 }
@@ -23,3 +27,24 @@ a.tc-tiddlylink-external:hover {
     left: 5px !important;
     width: 160px !important;
 }
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #2a2a2a;
+    color: #bbbbbb;
+    -webkit-text-size-adjust: none;
+}
+
+.hljs-meta .hljs-meta-string, .hljs-literal, .hljs-doctag, .hljs-regexp {
+    color: #2aa198;
+}
+
+.hljs-string {
+    color: #de7356;
+}
+.hljs-number {
+   color: #2AA172;
+}
+

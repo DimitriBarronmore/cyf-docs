@@ -1,0 +1,7 @@
+created: 20210709203149140
+modified: 20210709203149273
+tags: 
+title: File Structure: Voices
+type: text/vnd.tiddlywiki
+
+Voices can be put in <span class="term">YOUR MOD/Voices/</span>. They must be in .ogg or .wav format, although .wav is generally recommended. You can use them with the <span class="term">[voice]</span> text command; more on this in [[Text Commands]].
